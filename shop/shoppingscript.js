@@ -165,7 +165,10 @@ let data = [
     name: "steel",
   },
 ];
-let cart = [];
+let cart = localStorage.getItem("data")
+  ? JSON.parse(localStorage.getItem("data"))
+  : [];
+localStorage.setItem("data", []);
 let itembtns = document.querySelectorAll(".item");
 let content = document.querySelector(".content");
 let hem;
@@ -213,9 +216,10 @@ document.querySelector(".closecart").addEventListener("click", () => {
 });
 
 function updatecart() {
+  updatelocalstorage();
   if (cart.length != 0) {
     let rhtml = ``;
-    let cost =0;
+    let cost = 0;
     cart.forEach((r) => {
       rhtml += `<div class="vetriee">
             <div class="hemimg">
@@ -229,18 +233,20 @@ function updatecart() {
             </div>
         </div>
         </div>`;
-        cost+=r.price*r.quantity;
+      cost += r.price * r.quantity;
     });
     document.querySelector(".cartitems").innerHTML = rhtml;
-    document.querySelector(".totalcost").innerHTML = `Total cost : ${cost} Rupees`;
+    document.querySelector(
+      ".totalcost"
+    ).innerHTML = `Total cost : ${cost} Rupees`;
     document.querySelectorAll(".delete").forEach((p) => {
       p.addEventListener("click", () => {
         console.log(p);
         deleteitemincart(p.dataset.heid);
       });
     });
-} else {
-      document.querySelector(".totalcost").innerHTML = "Total cost : 0 Rupees";
+  } else {
+    document.querySelector(".totalcost").innerHTML = "Total cost : 0 Rupees";
     document.querySelector(".cartitems").innerHTML = "* No Items in the cart";
   }
 }
@@ -292,4 +298,8 @@ function deleteitemincart(id) {
     cart = filteredcart;
     updatecart();
   });
+}
+
+function updatelocalstorage() {
+  localStorage.setItem("data", JSON.stringify(cart));
 }
