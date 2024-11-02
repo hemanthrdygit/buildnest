@@ -214,6 +214,33 @@ let data = [
   {
     id: 5,
     name: "steel",
+    costtype:"KG",
+    items: [
+        {
+          name: "JSW Neosteel Fe550D TMT Rebar",
+          detail: "High strength and high ductility",
+          price: 55,
+          image: "steel/1.webp",
+          rating: 4,
+          pid: "s0",
+        },
+        {
+          name: "SW One Fe550 TMT Rebar",
+          detail: "High strength corrosion resistant TMT rebars",
+          price: 63.5,
+          image: "steel/2.webp",
+          rating: 4.3,
+          pid: "s1",
+        },
+        {
+          name: "VSP Fe500D TMT Rebar",
+          detail: " High strength and high ductility TMT rebars",
+          price: 61,
+          image: "steel/3.webp",
+          rating: 4,
+          pid: "s2",
+        }
+      ],
   },
 ];
 let cart = localStorage.getItem("data")
@@ -222,6 +249,7 @@ let cart = localStorage.getItem("data")
 localStorage.setItem("data", []);
 let itembtns = document.querySelectorAll(".item");
 let content = document.querySelector(".content");
+content.innerHTML = "Click on any Domain to view Products";
 let hem;
 itembtns.forEach((ele) => {
   ele.addEventListener("click", () => {
