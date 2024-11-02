@@ -2,7 +2,7 @@ let data = [
   {
     id: 1,
     name: "cement",
-    costtype: "perbag",
+    costtype: "perBag",
     items: [
       {
         name: "Bharathi Cement",
@@ -268,7 +268,7 @@ itembtns.forEach((ele) => {
             <div class="productdata">
                 <h3>${k.name}</h3>
                 <h4></h4>
-                <h2 class="price">Price : ₹${k.price}-${hem.costtype}</h2>
+                <h2 class="price">Price : ₹ ${k.price}-${hem.costtype}</h2>
                 <h2 class="ratings">Ratings : ${k.rating}/5</h2>
             </div>
             <div class="addto">
@@ -306,7 +306,7 @@ function updatecart() {
             <div class="hemdata">
                 <h3 class="hem1">${r.name}</h3>
                 <h4 class="hem2">Quantity : ${r.quantity}</h4>
-                <h4 class="hem3">Price : ${r.price}</h4>
+                <h4 class="hem3">Price : ₹ ${r.price}</h4>
                 <div class="delete" data-heid="${r.pid}">Delete</div>
             </div>
         </div>
@@ -316,7 +316,7 @@ function updatecart() {
     document.querySelector(".cartitems").innerHTML = rhtml;
     document.querySelector(
       ".totalcost"
-    ).innerHTML = `Total cost : ${cost} Rupees`;
+    ).innerHTML = `Total cost : ₹ ${cost} Rupees`;
     document.querySelectorAll(".delete").forEach((p) => {
       p.addEventListener("click", () => {
         deleteitemincart(p.dataset.heid);

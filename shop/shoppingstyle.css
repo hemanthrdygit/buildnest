@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: white;
+  background-color: #ecf3f9
 }
 .header {
   position: relative;
@@ -32,7 +32,7 @@ body {
   font-family: "Ephesis", cursive;
 }
 .optionarea {
-  background-color: cornflowerblue;
+  background-color: white;
   position: relative;
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@ body {
   padding: 7px 15px;
   font-weight: 500;
   cursor: pointer;
-  color: white;
+  color: black;
   transition: 0.5s ease transform;
 }
 .item:hover {
@@ -58,11 +58,11 @@ body {
   transform: scale(1.1);
 }
 .active {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 .accarea {
-  background-color: cornflowerblue;
+  background-color: white;
   position: relative;
   display: flex;
   justify-content: center;
@@ -105,9 +105,9 @@ body {
   position: relative;
   width: 100%;
   height: 250px;
-  background-color: cornflowerblue;
+  background-color: white;
   border-radius: 30px;
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +154,7 @@ body {
 }
 .productdata h2 {
     position: relative;
-    font-weight: 500;
+    font-weight: 400;
 }
 .price {
   position: relative;
@@ -180,8 +180,8 @@ body {
 }
 .addtocart {
   position: relative;
-  background-color: white;
-  color: black;
+  background-color: #323232;
+  color: white;
   border-radius: 10px;
   padding: 10px 30px;
   cursor: pointer;
@@ -194,7 +194,7 @@ body {
   width: 400px;
   height: 99%;
   right: 0;
-  background-color: rgb(202, 216, 246);
+  background-color: #cbe6fc;
   border-radius: 20px 0 0 20px;
   display: none;
   justify-content: flex-start;
@@ -228,13 +228,13 @@ body {
 }
 .closecart {
   position: relative;
-  background-color: cornflowerblue;
+  background-color:black;
   border-radius: 30px;
   transition: 0.5s ease transform;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   cursor: pointer;
 }
 .closecart i {
@@ -251,17 +251,16 @@ body {
   width: 100%;
   height: 200px;
   border-radius: 10px;
-  background-color: white;
+  background-color: white ;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   margin-block: 10px;
-  gap: 10px;
 }
 .hemimg {
   position: relative;
-  width: 50%;
+  width: 35%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -269,35 +268,36 @@ body {
 }
 .hemimg img {
   border-radius: 10px;
-  width: 160px;
-  height: 160px;
-  
+  width: 120px;
+  height: 120px;
+ 
 }
 .hemdata {
   position: relative;
-  width: 50%;
+  width: 65%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  padding-left: 25px;
 }
 .hem1 {
   position: relative;
-  font-family: 1rem;
+  font-size: 1rem;
   margin-block: 4px;
   margin-bottom: 10px;
 }
 .hem2 {
   position: relative;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-block: 2px;
 }
 .hem3 {
   position: relative;
   margin-block: 2px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 .delete {
@@ -307,7 +307,7 @@ body {
   cursor: pointer;
   color: white;
   padding: 6px 12px;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 .totalcost{
     position: relative;
@@ -359,7 +359,7 @@ body {
       }
       .productdata h2 {
         position: relative;
-        font-weight: 200;
+        font-weight: 400;
         font-size: 0.8rem;
       }
       .addtocart{
