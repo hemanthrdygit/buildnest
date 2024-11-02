@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+body {
+    padding: 2px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+}
+.header {
+  position: relative;
+  width: 100%;
+  padding-inline: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+}
+.heading {
+  position: relative;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: "Ephesis", cursive;
+}
+.optionarea {
+  background-color: cornflowerblue;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 40px;
+}
+.item {
+  position: relative;
+  font-size: 1rem;
+  margin-inline: 5px;
+  border-radius: 20px;
+  padding: 7px 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s ease transform;
+}
+.item:hover {
+  transform: scale(1.1);
+}
+.accitem:hover {
+  transform: scale(1.1);
+}
+.active {
+  background-color: white;
+  color: black;
+}
+.accarea {
+  background-color: cornflowerblue;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.accitem {
+  position: relative;
+  transition: 0.5s ease transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+}
+.content {
+  position: relative;
+  width: 98%;
+  min-height: 80vh;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.vetri {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: cornflowerblue;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 15px;
+  transition: 0.5s ease transform;
+}
+.img {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img img {
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+}
+.prod {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  align-items: center;
+}
+.productdata {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.productdata h3 {
+  position: relative;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.productdata h2 {
+  position: relative;
+  font-weight: 200;
+}
+.price {
+  position: relative;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.ratings {
+  position: relative;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.addto {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+.quant {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.addtocart {
+  position: relative;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.vetri:hover {
+  transform: scale(1.01);
+}
+.cartcont {
+  position: absolute;
+  width: 400px;
+  height: 99%;
+  right: 0;
+  background-color: rgb(202, 216, 246);
+  border-radius: 20px 0 0 20px;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  animation: open 0.5s ease;
+  padding-inline: 15px;
+  padding-bottom: 10px;
+}
+@keyframes open {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.red {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 10px;
+}
+.red h3 {
+  position: relative;
+  font-size: 2rem;
+}
+.closecart {
+  position: relative;
+  background-color: cornflowerblue;
+  border-radius: 30px;
+  transition: 0.5s ease transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+}
+.closecart i {
+  transform: scale(2);
+}
+.cartitems {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow-y: auto;
+}
+.vetriee {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-block: 10px;
+  gap: 10px;
+}
+.hemimg {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hemimg img {
+  border-radius: 10px;
+  width: 160px;
+  height: 160px;
+}
+.hemdata {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.hem1 {
+  position: relative;
+  font-family: 1rem;
+  margin-block: 4px;
+  margin-bottom: 10px;
+}
+.hem2 {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-block: 2px;
+}
+.hem3 {
+  position: relative;
+  margin-block: 2px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.delete {
+  position: relative;
+  margin-block: 10px;
+  background-color: crimson;
+  cursor: pointer;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+.totalcost{
+    position: relative;
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+
+@media screen and (max-width:425px) {
+    .header{
+        padding-inline: 20px;
+    }
+    .heading{
+        display: none;
+    }
+    .optionarea{
+        padding: 10px;
+        margin-inline: 10px;
+    }
+    .item{
+        font-size: 0.5rem;
+        padding: 7px;
+        margin-inline: 0px;
+    }
+    .content{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .accitem{
+        padding: 10px;
+    }
+    .vetri{
+        width: 100%;
+        height: 200px;
+        padding-inline: 15px;
+    }
+    .img img{
+        width: 150px;
+        height: 150px;
+    }
+    .prod{
+        padding-left: 10px;
+    }
+    .productdata{
+        margin-top: 5px;
+    }
+    .productdata h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+      .productdata h2 {
+        position: relative;
+        font-weight: 200;
+        font-size: 0.8rem;
+      }
+      .addtocart{
+        font-size: 20%;
+        font-weight: 500;
+        padding: 12px;
+      }
+      .cartcont{
+        width: 350px;    
+      }
+      .hemimg img{
+        width: 150px;
+        height: 150px;
+      }
+      .hemdata{
+        padding-left: 10px;
+        margin-top: 10px;
+      }
+      .hem1{
+        font-size: 0.9rem;
+      }
+      .hem2{
+        font-size: 0.8rem;
+      }
+      .hem3{
+        font-size: 0.8rem;
+      }
+      .delete{
+        margin-block: 12px;
+      }
+}
