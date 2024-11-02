@@ -166,25 +166,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 10px;
   border-radius: 30px;
-  margin-bottom: 15px;
-}
-.quant {
-  position: relative;
-  width: 40px;
-  height: 30px;
-  padding-left: 10px;
-  border: none;
-  outline: none;
-  border-radius: 10px;
+  margin-bottom: 20px;
 }
 .addtocart {
   position: relative;
   background-color: white;
   color: black;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 30px;
   cursor: pointer;
 }
 .vetri:hover {
@@ -272,6 +262,7 @@ body {
   border-radius: 10px;
   width: 160px;
   height: 160px;
+  
 }
 .hemdata {
   position: relative;
@@ -365,7 +356,7 @@ body {
       .addtocart{
         font-size: 20%;
         font-weight: 500;
-        padding: 12px;
+        padding: 12px 30px;
       }
       .cartcont{
         width: 350px;    

@@ -107,25 +107,25 @@ let data = [
     costtype: "container",
     items: [
       {
-        name: "Nippon Paint Walltron",
-        detail: "Summer Cool Roof",
-        price: 1827,
+        name: "Multi Surface Paint",
+        detail: "Soft Sheen Finish for Wall, Wood & Metal Surfaces",
+        price: 878,
         image: "paints/1.jpg",
-        rating: 3.9,
+        rating: 4.3,
         pid: "p0",
       },
       {
-        name: "ZASHIND Nerolac Paint White",
-        detail: "Weatherproof & Washable",
-        price: 610,
-        image: "paints/2.jpg",
+        name: "Solar Reflective roof Coating",
+        detail: "Heat Resistance Paint",
+        price: 2210,
+        image: "paints/2.webp",
         rating: 4,
         pid: "p1",
       },
       {
-        name: "Asian Paints Tractor Emulsion",
-        detail: " Smooth Wall Finish ",
-        price: 1650,
+        name: "DR. FIXIT Roofseal Classic",
+        detail: "Waterproofing Solution",
+        price: 1260,
         image: "paints/3.jpg",
         rating: 4.3,
         pid: "p2",
@@ -159,6 +159,57 @@ let data = [
   {
     id: 4,
     name: "furniture",
+    costtype:" ",
+    items: [
+        {
+          name: "Solimo Wood TV Unit ",
+          detail: "Summer Cool Roof",
+          price: 6689,
+          image: "furns/1.webp",
+          rating: 3,
+          pid: "f0",
+        },
+        {
+          name: " Solimo Quess Walnut Finish",
+          detail: "",
+          price: 1159,
+          image: "furns/2.webp",
+          rating: 4,
+          pid: "f1",
+        },
+        {
+          name: "Pre-Laminated Pine Tree",
+          detail: "  ",
+          price: 749,
+          image: "furns/3.webp",
+          rating: 4.3,
+          pid: "f2",
+        },
+        {
+          name: "Solimo 5 Tier Storage",
+          detail: "",
+          price: 5169,
+          image: "furns/4.webp",
+          rating: 3.5,
+          pid: "f3",
+        },
+        {
+          name: " Wall Mirror",
+          detail: "",
+          price: 899,
+          image: "furns/6.webp",
+          rating: 4,
+          pid: "f4",
+        },
+        {
+          name: "3 Layer Shoe Rack",
+          detail: "",
+          price: 1899,
+          image: "furns/5.webp",
+          rating: 4.5,
+          pid: "f5",
+        },
+      ],
   },
   {
     id: 5,
@@ -193,7 +244,6 @@ itembtns.forEach((ele) => {
                 <h2 class="ratings">Ratings : ${k.rating}/5</h2>
             </div>
             <div class="addto">
-                <input type="number" class="quant" value="1">
                 <div class="addtocart" data-hemid = "${k.pid}">Add to Cart</div>
             </div>
             </div>
@@ -241,7 +291,6 @@ function updatecart() {
     ).innerHTML = `Total cost : ${cost} Rupees`;
     document.querySelectorAll(".delete").forEach((p) => {
       p.addEventListener("click", () => {
-        console.log(p);
         deleteitemincart(p.dataset.heid);
       });
     });
@@ -285,7 +334,6 @@ function handlecart(id) {
       }
     });
   }
-  console.log(cart);
   updatecart();
 }
 
