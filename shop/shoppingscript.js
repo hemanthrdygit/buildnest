@@ -159,88 +159,88 @@ let data = [
   {
     id: 4,
     name: "furniture",
-    costtype:" ",
+    costtype: " ",
     items: [
-        {
-          name: "Solimo Wood TV Unit ",
-          detail: "Summer Cool Roof",
-          price: 6689,
-          image: "furns/1.webp",
-          rating: 3,
-          pid: "f0",
-        },
-        {
-          name: " Solimo Quess Walnut Finish",
-          detail: "",
-          price: 1159,
-          image: "furns/2.webp",
-          rating: 4,
-          pid: "f1",
-        },
-        {
-          name: "Pre-Laminated Pine Tree",
-          detail: "  ",
-          price: 749,
-          image: "furns/3.webp",
-          rating: 4.3,
-          pid: "f2",
-        },
-        {
-          name: "Solimo 5 Tier Storage",
-          detail: "",
-          price: 5169,
-          image: "furns/4.webp",
-          rating: 3.5,
-          pid: "f3",
-        },
-        {
-          name: " Wall Mirror",
-          detail: "",
-          price: 899,
-          image: "furns/6.webp",
-          rating: 4,
-          pid: "f4",
-        },
-        {
-          name: "3 Layer Shoe Rack",
-          detail: "",
-          price: 1899,
-          image: "furns/5.webp",
-          rating: 4.5,
-          pid: "f5",
-        },
-      ],
+      {
+        name: "Solimo Wood TV Unit ",
+        detail: "Summer Cool Roof",
+        price: 6689,
+        image: "furns/1.webp",
+        rating: 3,
+        pid: "f0",
+      },
+      {
+        name: " Solimo Quess Walnut Finish",
+        detail: "",
+        price: 1159,
+        image: "furns/2.webp",
+        rating: 4,
+        pid: "f1",
+      },
+      {
+        name: "Pre-Laminated Pine Tree",
+        detail: "  ",
+        price: 749,
+        image: "furns/3.webp",
+        rating: 4.3,
+        pid: "f2",
+      },
+      {
+        name: "Solimo 5 Tier Storage",
+        detail: "",
+        price: 5169,
+        image: "furns/4.webp",
+        rating: 3.5,
+        pid: "f3",
+      },
+      {
+        name: " Wall Mirror",
+        detail: "",
+        price: 899,
+        image: "furns/6.webp",
+        rating: 4,
+        pid: "f4",
+      },
+      {
+        name: "3 Layer Shoe Rack",
+        detail: "",
+        price: 1899,
+        image: "furns/5.webp",
+        rating: 4.5,
+        pid: "f5",
+      },
+    ],
   },
   {
     id: 5,
     name: "steel",
-    costtype:"KG",
+    costtype: "KG",
     items: [
-        {
-          name: "JSW Neosteel Fe550D TMT Rebar",
-          detail: "High strength and high ductility",
-          price: 55,
-          image: "steel/1.webp",
-          rating: 4,
-          pid: "s0",
-        },
-        {
-          name: "SW One Fe550 TMT Rebar",
-          detail: "High strength corrosion resistant TMT rebars",
-          price: 63.5,
-          image: "steel/2.webp",
-          rating: 4.3,
-          pid: "s1",
-        },
-        {
-          name: "VSP Fe500D TMT Rebar",
-          detail: " High strength and high ductility TMT rebars",
-          price: 61,
-          image: "steel/3.webp",
-          rating: 4,
-          pid: "s2",
-        }
-      ],
+      {
+        name: "JSW Neosteel Fe550D TMT Rebar",
+        detail: "High strength and high ductility",
+        price: 55,
+        image: "steel/1.webp",
+        rating: 4,
+        pid: "s0",
+      },
+      {
+        name: "SW One Fe550 TMT Rebar",
+        detail: "High strength corrosion resistant TMT rebars",
+        price: 63.5,
+        image: "steel/2.webp",
+        rating: 4.3,
+        pid: "s1",
+      },
+      {
+        name: "VSP Fe500D TMT Rebar",
+        detail: " High strength and high ductility TMT rebars",
+        price: 61,
+        image: "steel/3.webp",
+        rating: 4,
+        pid: "s2",
+      },
+    ],
   },
 ];
 let cart = localStorage.getItem("data")
@@ -301,7 +301,7 @@ function updatecart() {
     cart.forEach((r) => {
       rhtml += `<div class="vetriee">
             <div class="hemimg">
-                <img src="${r.image}"  alt="">
+                <img src="${r.image}" style="width:120px;height=120px"  alt="">
             </div>
             <div class="hemdata">
                 <h3 class="hem1">${r.name}</h3>
