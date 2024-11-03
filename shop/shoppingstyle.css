@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #ecf3f9
+  background-color: #ecf3f9;
 }
 .header {
   position: relative;
@@ -194,8 +194,9 @@ body {
   width: 400px;
   height: 99%;
   right: 0;
-  background-color: #cbe6fc;
+  background-color: #ecf3f9;
   border-radius: 20px 0 0 20px;
+  border: 0.1px solid gray;
   display: none;
   justify-content: flex-start;
   align-items: center;
